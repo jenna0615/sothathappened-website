@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Story | So That Happened</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="site-container">
+        <header>
+            <div class="logo">So That Happened</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="stories.html">Stories</a>
+                <a href="podcast.html">Podcast Stories</a>
+                <a href="about.html">About</a>
+                <a href="submit.html" class="active">Submit Your Story</a>
+                <a href="help.html">Help</a>
+            </nav>
+        </header>
+
+        <main class="content-card">
+            <h1>Share Your True Experience</h1>
+            <p>Got a true story you want to voice or publish? Read our guidelines on the Help page, then fill out the submission engine fields below.</p>
+            
+            <form action="mailto:contact@sothathappenedpodcast.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name / Pseudonym</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="headline">Story Title / Main Hook</label>
+                    <input type="text" id="headline" name="headline" required placeholder="The day everything changed...">
+                </div>
+
+                <div class="form-group">
+                    <label for="storybody">Write Your Story</label>
+                    <textarea id="storybody" name="storybody" rows="12" required placeholder="Type your full narrative experience here..."></textarea>
+                </div>
+
+                <button type="submit">Submit Story Text</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 So That Happened Podcast.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

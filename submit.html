@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Your Story | So That Happened</title>
+    <title>Submit Your Story | So... That Happened</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="site-container">
         <header>
-            <div class="logo">So That Happened</div>
+            <div class="logo">So... That Happened</div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="stories.html">Stories</a>
@@ -26,6 +26,8 @@
             <p>Got a true story you want to voice or publish? Read our guidelines on the Help page, then fill out the submission engine fields below.</p>
             
             <form action="https://formspree.io/f/xnpqpnyp" method="post" enctype="POST">
+                <input type="hidden" name="_subject" value="New Story Submission: So... That Happened">
+
                 <div class="form-group">
                     <label for="name">Your Name / Pseudonym</label>
                     <input type="text" id="name" name="name" required placeholder="Jane Doe">
@@ -33,27 +35,36 @@
                 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                    <input type="email" id="email" name="_replyto" required placeholder="jane@example.com">
                 </div>
 
                 <div class="form-group">
                     <label for="headline">Story Title / Main Hook</label>
-                    <input type="text" id="headline" name="headline" required placeholder="The day everything changed...">
+                    <input type="text" id="headline" name="story_title" required placeholder="The day everything changed...">
                 </div>
 
                 <div class="form-group">
                     <label for="storybody">Write Your Story</label>
-                    <textarea id="storybody" name="storybody" rows="12" required placeholder="Type your full narrative experience here..."></textarea>
+                    <textarea id="storybody" name="story_content" rows="12" required placeholder="Type your full narrative experience here..."></textarea>
                 </div>
 
-                <button type="submit">Submit Story Text</button>
+                <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1rem;">
+                    <input type="checkbox" id="agreement" name="disclaimer_agreed" required style="margin-top: 0.3rem;">
+                    <label for="agreement" style="font-size: 0.9rem; color: #555; font-weight: normal;">
+                        I read the guidelines on the Help page and agree that publication is at the podcast's discretion.
+                    </label>
+                </div>
+
+                <button type="submit" style="margin-top: 1rem;">Submit Story Text</button>
             </form>
         </main>
 
         <footer>
-            <p>&copy; 2026 So That Happened Podcast.</p>
+            <p>&copy; 2026 So... That Happened Podcast.</p>
         </footer>
     </div>
 
 </body>
 </html>
+
+

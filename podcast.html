@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast Episodes | So... That Happened</title>
-<!-- Browser Tab Favicon Integration -->
-<link rel="icon" type="image/jpeg" href="favicon.jpg">
-    <meta name="description" content="Watch and listen to the latest video and audio episodes of So... That Happened Podcast via YouTube and Rumble.">
+    <title>Podcast Stories | So... That Happened</title>
+    <meta name="description" content="Watch and listen to the latest media uploads from So... That Happened Podcast on YouTube and Rumble.">
+    
+    <!-- Browser Tab Favicon Integration -->
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Responsive Video Container Styles */
+        /* Responsive 16:9 Video Embedding Container Blueprint */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* Perfect 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; /* Maintains standard aspect ratio across displays */
             height: 0;
             overflow: hidden;
             margin-bottom: 2rem;
-            border: 3px solid var(--border-thick);
-            border-radius: 8px;
-            box-shadow: 4px 4px 0px rgba(0,0,0,1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-light);
         }
         
         .video-wrapper iframe {
@@ -30,13 +32,16 @@
             border: 0;
         }
 
-        .platform-title {
+        .platform-heading {
             font-size: 1.1rem;
-            font-weight: bold;
-            margin: 1rem 0 0.5rem 0;
+            font-weight: 700;
+            margin: 1.5rem 0 0.5rem 0;
             color: var(--primary-red);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
     </style>
 </head>
@@ -44,7 +49,12 @@
 
     <div class="site-container">
         
-        <!-- Site Header Navigation -->
+        <!-- BRAND BANNER INTEGRATION: Widescreen banner at the top of the layout -->
+        <div class="site-banner-container">
+            <img src="sthp-banner.jpg" alt="So... That Happened Podcast Banner" class="site-banner-img">
+        </div>
+        
+        <!-- Site Header Navigation (Sits beneath the banner) -->
         <header>
             <div class="logo">So... That Happened</div>
             <nav>
@@ -57,26 +67,26 @@
             </nav>
         </header>
 
-        <!-- Left Column: Main Media Content Box -->
+        <!-- Left Column: Main Video Content Block -->
         <main class="content-card">
-            <h1>Podcast Stories Hub</h1>
+            <h1>Podcast Stories & Media Hub</h1>
             <p>Watch our full video episodes below or stream the audio track directly from our R2 cloud storage archive.</p>
 
-            <!-- YouTube Responsive Frame -->
-            <div class="platform-title">📺 Stream via YouTube</div>
+            <!-- YouTube Video Embed Segment -->
+            <div class="platform-heading">📺 Stream via YouTube</div>
             <div class="video-wrapper">
-                <!-- Swap out the sample source URL with your true YouTube clip ID code when ready -->
+                <!-- SWAP URL: When your first video is live, swap the code below with your link -->
                 <iframe src="https://youtube.com" allowfullscreen></iframe>
             </div>
 
-            <!-- Rumble Responsive Frame -->
-            <div class="platform-title">💨 Stream via Rumble</div>
+            <!-- Rumble Video Embed Segment -->
+            <div class="platform-heading">💨 Stream via Rumble</div>
             <div class="video-wrapper">
-                <!-- Swap out the sample embed source URL with your unique Rumble frame ID code when ready -->
+                <!-- SWAP URL: When your Rumble video is live, swap the code below with your embed link -->
                 <iframe src="https://rumble.com" allowfullscreen></iframe>
             </div>
 
-            <!-- Audio Backup Block -->
+            <!-- Audio Player Alternative -->
             <div class="media-block">
                 <h3>Prefer Just the Audio Track?</h3>
                 <audio controls>
@@ -86,25 +96,27 @@
             </div>
         </main>
 
-        <!-- Right Column: Sidebar Panel (Mirroring your original drawing layout) -->
+        <!-- Right Column: Sidebar Panel (Matching your original drawing layout layout) -->
         <aside class="sidebar-panel">
             
-            <!-- Link 1 Oval Pill Button -->
+            <!-- YouTube Channel Link Button -->
             <a href="https://youtube.com" target="_blank" class="pill-link-card">
                 Our YouTube Channel
             </a>
 
-            <!-- Link 2 Oval Pill Button -->
+            <!-- Rumble Channel Link Button -->
             <a href="https://rumble.com" target="_blank" class="pill-link-card">
                 Our Rumble Channel
             </a>
 
-            <!-- Brand Illustration Card (Bottom Right Block from Drawing) -->
+            <!-- BRAND LOGO INTEGRATION: Upgraded branding block using your circular thumbnail file -->
             <div class="branding-card">
-                <h3 style="margin-bottom:0.5rem;">So... That Happened</h3>
-                <p style="font-size:0.9rem; color:var(--text-muted); margin:0 0 1rem 0;">True Stories • Real People</p>
-                <div style="font-size: 3rem; margin: 1rem 0;">🗣️🎙️📚</div>
-                <p style="font-size:0.85rem; font-style:italic; line-height:1.4;">Edited by: Art Team<br>Art by: Jenna</p>
+                <img src="sthp-logo.jpg" alt="So... That Happened Logo" class="sidebar-logo-img">
+                <h3 style="margin: 1rem 0 0.2rem 0;">So... That Happened</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin:0;">True Stories • Real People</p>
+                <p style="font-size:0.85rem; font-style:italic; line-height:1.4; margin-top: 1rem;">
+                    Edited by: Art Team<br>Art by: Jenna
+                </p>
             </div>
             
         </aside>
@@ -118,4 +130,5 @@
 
 </body>
 </html>
+
 

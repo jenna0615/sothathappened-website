@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>So... That Happened | Real Life Stories Podcast</title>
+    <!-- Core SEO Meta Configuration -->
     <meta name="description" content="Welcome to So... That Happened Podcast. Discover raw, unvarnished real-life storytelling and true experiences that connect humanity.">
     <meta name="keywords" content="SoThatHappened, RealLifeStories, PersonalStories, Storytelling, HumanConnection, Podcast, RealPeople, TrueStories, LifeExperiences, AudioDrama, NarrativePodcast">
     <link rel="stylesheet" href="style.css">
@@ -11,6 +12,13 @@
 <body>
 
     <div class="site-container">
+        
+        <!-- BRAND BANNER INTEGRATION: Widescreen banner file at the very top of the layout -->
+        <div class="site-banner-container">
+            <img src="sthp-banner.jpg" alt="So... That Happened Podcast Banner" class="site-banner-img">
+        </div>
+        
+        <!-- Site Header Navigation (Positioned beneath the banner) -->
         <header>
             <div class="logo">So... That Happened</div>
             <nav>
@@ -23,24 +31,54 @@
             </nav>
         </header>
 
+        <!-- Left Column: Main Text Content Panel -->
         <main class="content-card">
             <h1>Welcome to the Community</h1>
             <p>Every single day, incredible things happen to ordinary people. This platform is built to catch those defining moments, package them up, and bring raw, authentic human experiences right to your speakers.</p>
             
+            <!-- Latest Audio Track Spot -->
             <div class="media-block">
                 <h3>Listen to the Latest Story Spotlight</h3>
                 <audio controls>
-                    <source src="https://sothathappenedpodcast.com" type="audio/mp4">
-                    Your browser does not support the audio element.
+                    <source src="https://media.sothathappenedpodcast.com/STHP.m4a" type="audio/mp4">
+                    Your browser does not support the audio player element.
                 </audio>
             </div>
         </main>
 
+        <!-- Right Column: Sidebar Panel (Matching your original drawing layout layout) -->
+        <aside class="sidebar-panel">
+            
+            <!-- YouTube Live Connection Oval Pill Link -->
+            <a href="https://www.youtube.com/channel/UC5gKuNCES-Q8fhsKctp1tvw" target="_blank" class="pill-link-card">
+                Our YouTube Channel
+            </a>
+
+            <!-- Rumble Live Connection Oval Pill Link -->
+            <a href="https://rumble.com/c/c-7951146" target="_blank" class="pill-link-card">
+                Our Rumble Channel
+            </a>
+
+            <!-- BRAND LOGO INTEGRATION: Upgraded branding block using your circular thumbnail file -->
+            <div class="branding-card">
+                <img src="sthp-logo.jpg" alt="So... That Happened Logo" class="sidebar-logo-img">
+                <h3 style="margin: 1rem 0 0.2rem 0;">So... That Happened</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin:0;">True Stories • Real People</p>
+                <p style="font-size:0.85rem; font-style:italic; line-height:1.4; margin-top: 1rem;">
+                    Edited by: Art Team<br>Art by: Jenna
+                </p>
+            </div>
+            
+        </aside>
+
+        <!-- Site Footer -->
         <footer>
             <p>&copy; 2026 So... That Happened Podcast. #SoThatHappened #RealLifeStories #Storytelling #HumanConnection</p>
         </footer>
+
     </div>
 
 </body>
 </html>
+
 

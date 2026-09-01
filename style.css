@@ -207,3 +207,41 @@ footer {
         grid-column: span 1;
     }
 }
+/* --- Brand Asset Integration Styles --- */
+
+/* Responsive Top Banner Formatting */
+.site-banner-container {
+    grid-column: span 2; /* Forces banner to span the full width of your two columns */
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border-bottom: 4px solid var(--accent-gold); /* Gold separation accent line */
+}
+
+.site-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Sidebar Logo Image Formatting */
+.sidebar-logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Perfect circle alignment */
+    border: 3px solid var(--accent-gold); /* Wraps logo in a professional gold frame */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+/* Mobile responsive fixes for banner */
+@media (max-width: 768px) {
+    .site-banner-container {
+        grid-column: span 1;
+        border-radius: 8px;
+    }
+}
+

@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast Episodes | So... That Happened</title>
+    <meta name="description" content="Watch and listen to the latest video and audio episodes of So... That Happened Podcast via YouTube and Rumble.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Responsive Video Container Styles */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Perfect 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 3px solid var(--border-thick);
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px rgba(0,0,0,1);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .platform-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 1rem 0 0.5rem 0;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
 
     <div class="site-container">
+        
+        <!-- Site Header Navigation -->
         <header>
             <div class="logo">So... That Happened</div>
             <nav>
@@ -21,31 +55,63 @@
             </nav>
         </header>
 
+        <!-- Left Column: Main Media Content Box -->
         <main class="content-card">
-            <h1>Podcast Stories & Media Hub</h1>
-            <p>Listen or watch our compiled spoken-word narratives directly on this page via embedded streams.</p>
+            <h1>Podcast Stories Hub</h1>
+            <p>Watch our full video episodes below or stream the audio track directly from our R2 cloud storage archive.</p>
 
-            <div class="media-block">
-                <h3>Latest Audio Track</h3>
-                <audio controls>
-                    <source src="https://sothathappenedpodcast.com" type="audio/mp4">
-                </audio>
+            <!-- YouTube Responsive Frame -->
+            <div class="platform-title">📺 Stream via YouTube</div>
+            <div class="video-wrapper">
+                <!-- Swap out the sample source URL with your true YouTube clip ID code when ready -->
+                <iframe src="https://youtube.com" allowfullscreen></iframe>
             </div>
 
+            <!-- Rumble Responsive Frame -->
+            <div class="platform-title">💨 Stream via Rumble</div>
+            <div class="video-wrapper">
+                <!-- Swap out the sample embed source URL with your unique Rumble frame ID code when ready -->
+                <iframe src="https://rumble.com" allowfullscreen></iframe>
+            </div>
+
+            <!-- Audio Backup Block -->
             <div class="media-block">
-                <h3>Video Feed Stream</h3>
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px;">
-                    <!-- Copy your unique video embed code snippet here when available -->
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #333; color: white; display: flex; align-items: center; justify-content: center;">
-                        Video Embed Frame (YouTube / Rumble Link Placeholder)
-                    </div>
-                </div>
+                <h3>Prefer Just the Audio Track?</h3>
+                <audio controls>
+                    <source src="https://sothathappenedpodcast.com" type="audio/mp4">
+                    Your browser does not support the audio player element.
+                </audio>
             </div>
         </main>
 
+        <!-- Right Column: Sidebar Panel (Mirroring your original drawing layout) -->
+        <aside class="sidebar-panel">
+            
+            <!-- Link 1 Oval Pill Button -->
+            <a href="https://youtube.com" target="_blank" class="pill-link-card">
+                Our YouTube Channel
+            </a>
+
+            <!-- Link 2 Oval Pill Button -->
+            <a href="https://rumble.com" target="_blank" class="pill-link-card">
+                Our Rumble Channel
+            </a>
+
+            <!-- Brand Illustration Card (Bottom Right Block from Drawing) -->
+            <div class="branding-card">
+                <h3 style="margin-bottom:0.5rem;">So... That Happened</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted); margin:0 0 1rem 0;">True Stories • Real People</p>
+                <div style="font-size: 3rem; margin: 1rem 0;">🗣️🎙️📚</div>
+                <p style="font-size:0.85rem; font-style:italic; line-height:1.4;">Edited by: Art Team<br>Art by: Jenna</p>
+            </div>
+            
+        </aside>
+
+        <!-- Site Footer -->
         <footer>
-            <p>&copy; 2026 So... That Happened Podcast.</p>
+            <p>&copy; 2026 So... That Happened Podcast. #SoThatHappened #TrueStories</p>
         </footer>
+
     </div>
 
 </body>

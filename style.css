@@ -278,4 +278,14 @@ footer {
     margin-right: 0.5rem;
     font-family: Georgia, serif;
 }
+/* --- Single Column Display Override for Stories & About Pages --- */
+.single-column-page .site-container {
+    grid-template-columns: 1fr; /* Removes the 1.3fr 1fr split, forcing a single block column */
+    max-width: 900px;           /* Narrows the reading width so long lines are comfortable to read */
+}
+
+.single-column-page header, 
+.single-column-page footer {
+    grid-column: span 1;        /* Adjusts grid spacing boundaries safely */
+}
 

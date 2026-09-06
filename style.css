@@ -289,3 +289,56 @@ footer {
     grid-column: span 1;        /* Adjusts grid spacing boundaries safely */
 }
 
+
+/* --- Responsive Navigation Icons Configuration --- */
+
+/* 1. Base Setup (Desktop Layout) */
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between the icon and text */
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hide the icon indicators on wide desktop screens to keep the raw text layout classic */
+nav a i {
+    display: none; 
+    font-size: 1.25rem;
+}
+
+/* 2. Responsive Mobile Breakpoint Layout Shift */
+@media screen and (max-width: 768px) {
+    /* Tighten the header container space */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around; /* Distributes menu items evenly across mobile viewports */
+        gap: 0.25rem;
+    }
+
+    /* Target the text wrapper boxes and make them invisible */
+    nav a span {
+        display: none; 
+    }
+
+    /* Force the icon vectors to render and scale nicely inside the menu track */
+    nav a i {
+        display: inline-block;
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+
+    /* Keep active state backgrounds cohesive on mobile button boxes */
+    nav a.active i {
+        background-color: var(--primary-red);
+        color: #ffffff;
+    }
+}
+

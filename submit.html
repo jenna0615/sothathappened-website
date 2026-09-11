@@ -32,40 +32,46 @@
 
         <main class="content-card">
             <h1>Share Your True Experience</h1>
-            <p>Got a true story you want to voice or publish? Read our guidelines on the Help page, then fill out the submission engine fields below.</p>
-            
-            <form action="https://formspree.io/f/xnpqpnyp" method="post" enctype="POST">
-                <input type="hidden" name="_subject" value="New Story Submission: So... That Happened">
+            <p>Got a true story you want to voice or publish? Read our guidelines on the Help page, then fill out the submission engine fields below.</p>           
+    <form action="#" method="POST" class="narrative-form">
+        <!-- Name Input Field -->
+        <div class="form-group">
+            <label for="visitor-name">Your Name / Alias</label>
+            <input type="text" id="visitor-name" name="name" placeholder="How should we address you? (Can be anonymous)" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="name">Your Name / Pseudonym</label>
-                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="_replyto" required placeholder="jane@example.com">
-                </div>
+        <!-- Email Input Field -->
+        <div class="form-group">
+            <label for="visitor-email">Email Address</label>
+            <input type="email" id="visitor-email" name="email" placeholder="yourname@example.com" required>
+            <small class="field-hint">We'll only use this to contact you if we want to feature your story on the show.</small>
+        </div>
 
-                <div class="form-group">
-                    <label for="headline">Story Title / Main Hook</label>
-                    <input type="text" id="headline" name="story_title" required placeholder="The day everything changed...">
-                </div>
+        <!-- Story Title Field -->
+        <div class="form-group">
+            <label for="story-title">Story Title</label>
+            <input type="text" id="story-title" name="story_title" placeholder="Give your memory a catchy headline" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="storybody">Write Your Story</label>
-                    <textarea id="storybody" name="story_content" rows="12" required placeholder="Type your full narrative experience here..."></textarea>
-                </div>
+        <!-- The Interactive Narrative Drop-Box -->
+        <div class="form-group">
+            <label for="story-content">Your Story</label>
+            <textarea id="story-content" name="story" rows="10" placeholder="Type or paste your true story here..." required></textarea>
+        </div>
 
-                <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1rem;">
-                    <input type="checkbox" id="agreement" name="disclaimer_agreed" required style="margin-top: 0.3rem;">
-                    <label for="agreement" style="font-size: 0.9rem; color: #555; font-weight: normal;">
-                        I read the guidelines on the Help page and agree that publication is at the podcast's discretion.
-                    </label>
-                </div>
+        <!-- Privacy & Terms Checkbox -->
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms-agreement" name="terms" value="agree" required>
+            <label for="terms-agreement">
+                I certify this is a true story and grant permission for it to be read or adapted for the podcast.
+            </label>
+        </div>
 
-                <button type="submit" style="margin-top: 1rem;">Submit Story Text</button>
-            </form>
+        <!-- Submit Action Button -->
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">Submit Your Story</button>
+        </div>
+    </form>
         </main>
 
         <footer>

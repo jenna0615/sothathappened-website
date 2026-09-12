@@ -572,3 +572,73 @@ footer {
     width: 100%;
     gap: 2.5rem; /* Standard layout spacing gaps between components */
 }
+/* ==========================================================================
+   Fix Background Colors & Typography Contrast for Stories Page
+   ========================================================================== */
+
+/* 1. Add a solid background style to the top Table of Contents Container */
+.story-toc-container {
+    background-color: #ffffff; /* Forces a solid white block */
+    color: #333333;            /* Dark charcoal text for comfortable reading */
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle depth shadow */
+}
+
+/* Ensure the header inside the TOC contrasts beautifully */
+.story-toc-container h2 {
+    color: #8c1c1c;            /* Your signature rich podcast red */
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 0;
+    padding-bottom: 0.75rem;
+}
+
+/* 2. Style the individual jump-cards inside the TOC grid */
+.toc-card {
+    background-color: #fcf9f5; /* Off-white/cream background to separate cards */
+    border: 1px solid #ebdcd0;
+    border-left: 4px solid #8c1c1c; /* Thick red accent timeline bar */
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.toc-card h3 {
+    color: #222222;
+    margin-top: 0;
+}
+
+.toc-card p {
+    color: #555555;
+}
+
+/* Fix the hard-to-read blue link text to match your red branding */
+.toc-jump-link {
+    color: #8c1c1c !important;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.toc-jump-link:hover {
+    text-decoration: underline;
+}
+
+/* 3. Wrap the main story excerpt and full text areas in matching white containers */
+.story-content-block {
+    background-color: #ffffff; /* Forces a clean solid white card background layout */
+    color: #333333;            /* Dark, highly readable typography layout */
+    padding: 2rem;
+    border-radius: 0 0 8px 8px; /* Rounds bottom corners to seamlessly match your title cards */
+    margin-top: -1px;          /* Glues the body block flush to the bottom of the title element */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure all text inside the story blocks matches the clean dark layout readability profile */
+.story-excerpt p,
+.story-full-text p {
+    color: #333333 !important;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+}

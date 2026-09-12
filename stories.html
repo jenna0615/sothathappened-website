@@ -31,9 +31,85 @@
             </nav>
         </header>
 
-        <main class="content-card">
-            <h1>Written Chronicles</h1>
-            <p>Explore the full portfolio library of real accounts shared by community members worldwide.</p>
+<!-- ==========================================================================
+     Table of Contents Segment (Top of Page)
+     ========================================================================== -->
+<div class="story-toc-container">
+    <h2>Explore the Stories</h2>
+    <div class="toc-grid">
+        <!-- Story 1 Snippet -->
+        <div class="toc-card">
+            <h3>Blinded by the Fog</h3>
+            <p>A rookie trucker gets stranded sideways across a busy California highway on a zero-visibility morning.</p>
+            <a href="#story-fog" class="toc-jump-link">Jump to Story ↓</a>
+        </div>
+
+        <!-- Story 2 Snippet -->
+        <div class="toc-card">
+            <h3>One Angel After Another</h3>
+            <p>A twenty-something woman survives a catastrophic medical crisis against all mathematical odds.</p>
+            <a href="#story-angels" class="toc-jump-link">Jump to Story ↓</a>
+        </div>
+    </div>
+</div>
+
+<!-- ==========================================================================
+     The Main Stories List
+     ========================================================================== -->
+<div class="stories-feed-wrapper">
+
+    <!-- ARTICLE 1: FOG STORY -->
+    <article class="podcast-story" id="story-fog">
+        <header class="story-header">
+            <h2>Blinded by the Fog: The Day a CB Radio Rumor Almost Wrecked Me</h2>
+            <div class="story-meta">1990s Trucking | True Stories</div>
+        </header>
+        
+        <div class="story-content-block">
+            <!-- Visible Portion (First 1-2 Paragraphs) -->
+            <div class="story-excerpt">
+                <p class="intro-text">Picture this: It’s the early 1990s. No cell phones, no social media. I’m in my early twenties, I’ve only been a truck driver for a few months, and there are very few women behind the wheel of an eighteen-wheeler.</p>
+                <p>My boyfriend and I are team-driving through Southern California on one of the foggiest mornings I have ever seen. Visibility is maybe forty yards. I’ve just loaded up a haul of fresh produce, and to get to my next stop, I have to drive my rig across the double lane Highway 86.</p>
+            </div>
+
+            <!-- Hidden Full Story Portion -->
+            <div class="story-full-text collapsed">
+                <p>My logbook isn't up to date... (Insert the remaining full story body copy here) ...turning point that changed how I viewed the world.</p>
+            </div>
+            
+            <!-- Toggle Button Action Line -->
+            <button class="btn-toggle-story" onclick="toggleStory(this)">Read the Full Story</button>
+        </div>
+    </article>
+
+    <!-- ARTICLE 2: ANGEL STORY -->
+    <article class="podcast-story" id="story-angels">
+        <header class="story-header">
+            <h2>One Angel After Another: A True Story of Purpose</h2>
+            <div class="story-meta">2000s Medical Miracle | True Stories</div>
+        </header>
+        
+        <div class="story-content-block">
+            <!-- Visible Portion (First 1-2 Paragraphs) -->
+            <div class="story-excerpt">
+                <p class="intro-text">I shouldn’t be here telling you this story. By all medical logic, my time should have run out decades ago. But the universe had other plans for me. Today, I want to tell you about the why, and the miraculous how.</p>
+                <p>In September of 2001, our entire nation was reeling. We had just experienced one of the most heartbreaking events in modern history with the tragic loss of life at the Twin Towers. As fate would have it, my parents happened to be visiting me from out of state during that exact time.</p>
+            </div>
+
+            <!-- Hidden Full Story Portion -->
+            <div class="story-full-text collapsed">
+                <p>By the end of September, my parents were safely back home... (Insert the remaining full story body copy here) ...I’m here for all of it.</p>
+            </div>
+            
+            <!-- Toggle Button Action Line -->
+            <button class="btn-toggle-story" onclick="toggleStory(this)">Read the Full Story</button>
+        </div>
+    </article>
+
+</div>
+
+
+
 
             <div class="grid">
                <article class="podcast-story">
@@ -189,6 +265,28 @@
             <p>&copy; 2026 So... That Happened Podcast.</p>
         </footer>
     </div>
+
+<script>
+function toggleStory(buttonElement) {
+    // Find the full text block relative to the button that was clicked
+    const contentBlock = buttonElement.previousElementSibling;
+    
+    if (contentBlock.classList.contains('collapsed')) {
+        // Expand the layout block text tracking properties
+        contentBlock.classList.remove('collapsed');
+        contentBlock.classList.add('expanded');
+        buttonElement.textContent = "Show Less";
+    } else {
+        // Collapse it back down
+        contentBlock.classList.remove('expanded');
+        contentBlock.classList.add('collapsed');
+        buttonElement.textContent = "Read the Full Story";
+        
+        // Optional: Smoothly scroll back up to the top of that specific story header link
+        buttonElement.closest('.podcast-story').scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
 
 </body>
 </html>

@@ -467,3 +467,100 @@ footer {
     }
 }
 
+/* ==========================================================================
+   Table of Contents & Expandable Text Layouts
+   ========================================================================== */
+
+/* TOC Panel Wrapper */
+.story-toc-container {
+    background: linear-gradient(145deg, #181010, #0f0a0a);
+    border: 1px solid #2d1a1a;
+    border-radius: 8px;
+    padding: 1.75rem;
+    margin-bottom: 3.5rem;
+}
+
+.story-toc-container h2 {
+    color: #f7e7ce; /* Accent gold/cream */
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid #2d1a1a;
+    padding-bottom: 0.5rem;
+}
+
+/* Side-by-Side Summary Grid */
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.toc-card {
+    background-color: #0a0505;
+    padding: 1.25rem;
+    border-left: 3px solid #8c1c1c; /* Brand accent red bar */
+    border-radius: 4px;
+}
+
+.toc-card h3 {
+    color: #f5f0f0;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+}
+
+.toc-card p {
+    color: #9c8a8a;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 0 1rem 0;
+}
+
+.toc-jump-link {
+    color: #f7e7ce;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.toc-jump-link:hover {
+    color: #8c1c1c;
+}
+
+/* Expandable Hidden Text States */
+.story-full-text.collapsed {
+    display: none; /* Keeps full story content hidden by default layout */
+}
+
+.story-full-text.expanded {
+    display: block;
+    margin-top: 1rem;
+    animation: fadeInReveal 0.4s ease-in-out;
+}
+
+/* Smooth expansion layout fade effect */
+@keyframes fadeInReveal {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Core Toggle Button Layout */
+.btn-toggle-story {
+    background-color: transparent;
+    border: 2px solid #8c1c1c;
+    color: #f5f0f0;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.btn-toggle-story:hover {
+    background-color: #8c1c1c;
+    color: #ffffff;
+}

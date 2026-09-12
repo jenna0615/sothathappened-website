@@ -216,27 +216,5 @@
         </footer>
     </div>
 
-<script>
-function toggleStory(buttonElement) {
-    // Find the full text block relative to the button that was clicked
-    const contentBlock = buttonElement.previousElementSibling;
-    
-    if (contentBlock.classList.contains('collapsed')) {
-        // Expand the layout block text tracking properties
-        contentBlock.classList.remove('collapsed');
-        contentBlock.classList.add('expanded');
-        buttonElement.textContent = "Show Less";
-    } else {
-        // Collapse it back down
-        contentBlock.classList.remove('expanded');
-        contentBlock.classList.add('collapsed');
-        buttonElement.textContent = "Read the Full Story";
-        
-        // Optional: Smoothly scroll back up to the top of that specific story header link
-        buttonElement.closest('.podcast-story').scrollIntoView({ behavior: 'smooth' });
-    }
-}
-</script>
-
 </body>
 </html>

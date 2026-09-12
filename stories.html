@@ -31,82 +31,91 @@
             </nav>
         </header>
 
-<!-- ==========================================================================
-     Table of Contents Segment (Top of Page)
-     ========================================================================== -->
-<div class="story-toc-container">
-    <h2>Explore the Stories</h2>
-    <div class="toc-grid">
-        <!-- Story 1 Snippet -->
-        <div class="toc-card">
-            <h3>Blinded by the Fog</h3>
-            <p>A rookie trucker gets stranded sideways across a busy California highway on a zero-visibility morning.</p>
-            <a href="#story-fog" class="toc-jump-link">Jump to Story ↓</a>
-        </div>
+        <!-- 2. MAIN SINGLE COLUMN CONTENT AREA Wrapper -->
+        <!-- This new wrapper forces your layout to cleanly stack your text blocks vertically -->
+        <main class="main-stories-column">
 
-        <!-- Story 2 Snippet -->
-        <div class="toc-card">
-            <h3>One Angel After Another</h3>
-            <p>A twenty-something woman survives a catastrophic medical crisis against all mathematical odds.</p>
-            <a href="#story-angels" class="toc-jump-link">Jump to Story ↓</a>
-        </div>
-    </div>
-</div>
+            <!-- ==========================================================================
+                 Table of Contents Segment (Top of Page)
+                 ========================================================================== -->
+            <div class="story-toc-container">
+                <h2>Explore the Stories</h2>
+                <div class="toc-grid">
+                    <!-- Story 1 Snippet -->
+                    <div class="toc-card">
+                        <h3>Blinded by the Fog</h3>
+                        <p>A rookie trucker gets stranded sideways across a busy California highway on a zero-visibility morning.</p>
+                        <a href="#story-fog" class="toc-jump-link">Jump to Story ↓</a>
+                    </div>
 
-<!-- ==========================================================================
-     The Main Stories List
-     ========================================================================== -->
-<div class="stories-feed-wrapper">
-
-    <!-- ARTICLE 1: FOG STORY -->
-    <article class="podcast-story" id="story-fog">
-        <header class="story-header">
-            <h2>Blinded by the Fog: The Day a CB Radio Rumor Almost Wrecked Me</h2>
-            <div class="story-meta">1990s Trucking | True Stories</div>
-        </header>
-        
-        <div class="story-content-block">
-            <!-- Visible Portion (First 1-2 Paragraphs) -->
-            <div class="story-excerpt">
-                <p class="intro-text">Picture this: It’s the early 1990s. No cell phones, no social media. I’m in my early twenties, I’ve only been a truck driver for a few months, and there are very few women behind the wheel of an eighteen-wheeler.</p>
-                <p>My boyfriend and I are team-driving through Southern California on one of the foggiest mornings I have ever seen. Visibility is maybe forty yards. I’ve just loaded up a haul of fresh produce, and to get to my next stop, I have to drive my rig across the double lane Highway 86.</p>
+                    <!-- Story 2 Snippet -->
+                    <div class="toc-card">
+                        <h3>One Angel After Another</h3>
+                        <p>A twenty-something woman survives a catastrophic medical crisis against all mathematical odds.</p>
+                        <a href="#story-angels" class="toc-jump-link">Jump to Story ↓</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Hidden Full Story Portion -->
-            <div class="story-full-text collapsed">
-                <p>My logbook isn't up to date... (Insert the remaining full story body copy here) ...turning point that changed how I viewed the world.</p>
-            </div>
-            
-            <!-- Toggle Button Action Line -->
-            <button class="btn-toggle-story" onclick="toggleStory(this)">Read the Full Story</button>
-        </div>
-    </article>
+            <!-- ==========================================================================
+                 The Main Stories List
+                 ========================================================================== -->
+            <div class="stories-feed-wrapper">
 
-    <!-- ARTICLE 2: ANGEL STORY -->
-    <article class="podcast-story" id="story-angels">
-        <header class="story-header">
-            <h2>One Angel After Another: A True Story of Purpose</h2>
-            <div class="story-meta">2000s Medical Miracle | True Stories</div>
-        </header>
-        
-        <div class="story-content-block">
-            <!-- Visible Portion (First 1-2 Paragraphs) -->
-            <div class="story-excerpt">
-                <p class="intro-text">I shouldn’t be here telling you this story. By all medical logic, my time should have run out decades ago. But the universe had other plans for me. Today, I want to tell you about the why, and the miraculous how.</p>
-                <p>In September of 2001, our entire nation was reeling. We had just experienced one of the most heartbreaking events in modern history with the tragic loss of life at the Twin Towers. As fate would have it, my parents happened to be visiting me from out of state during that exact time.</p>
-            </div>
+                <!-- ARTICLE 1: FOG STORY -->
+                <article class="podcast-story" id="story-fog">
+                    <header class="story-header">
+                        <h2>Blinded by the Fog: The Day a CB Radio Rumor Almost Wrecked Me</h2>
+                        <div class="story-meta">1990s Trucking | True Stories</div>
+                    </header>
+                    
+                    <div class="story-content-block">
+                        <!-- Visible Portion (First 1-2 Paragraphs) -->
+                        <div class="story-excerpt">
+                            <p class="intro-text">Picture this: It’s the early 1990s. No cell phones, no social media. I’m in my early twenties, I’ve only been a truck driver for a few months, and there are very few women behind the wheel of an eighteen-wheeler.</p>
+                            <p>My boyfriend and I are team-driving through Southern California on one of the foggiest mornings I have ever seen. Visibility is maybe forty yards. I’ve just loaded up a haul of fresh produce, and to get to my next stop, I have to drive my rig across the double lane Highway 86.</p>
+                        </div>
 
-            <!-- Hidden Full Story Portion -->
-            <div class="story-full-text collapsed">
-                <p>By the end of September, my parents were safely back home... (Insert the remaining full story body copy here) ...I’m here for all of it.</p>
-            </div>
-            
-            <!-- Toggle Button Action Line -->
-            <button class="btn-toggle-story" onclick="toggleStory(this)">Read the Full Story</button>
-        </div>
-    </article>
+                        <!-- Hidden Full Story Portion -->
+                        <div class="story-full-text collapsed">
+                            <!-- [YOUR FOG STORY FULL TEXT BODY COPY CONTINUES HERE] -->
+                            <p>My logbook isn't up to date... turning point that changed how I viewed the world.</p>
+                        </div>
+                        
+                        <!-- Toggle Button Action Line -->
+                        <button class="btn-toggle-story" onclick="toggleStory(this)">Read the Full Story</button>
+                    </div>
+                </article>
 
-</div>
+                <!-- ARTICLE 2: ANGEL STORY -->
+                <article class="podcast-story" id="story-angels">
+                    <header class="story-header">
+                        <h2>One Angel After Another: A True Story of Purpose</h2>
+                        <div class="story-meta">2000s Medical Miracle | True Stories</div>
+                    </header>
+                    
+                    <div class="story-content-block">
+                        <!-- Visible Portion (First 1-2 Paragraphs) -->
+                        <div class="story-excerpt">
+                            <p class="intro-text">I shouldn’t be here telling you this story. By all medical logic, my time should have run out decades ago. But the universe had other plans for me. Today, I want to tell you about the why, and the miraculous how.</p>
+                            <p>In September of 2001, our entire nation was reeling. We had just experienced one of the most heartbreaking events in modern history with the tragic loss of life at the Twin Towers. As fate would have it, my parents happened to be visiting me from out of state during that exact time.</p>
+                        </div>
+
+                        <!-- Hidden Full Story Portion -->
+                        <div class="story-full-text collapsed">
+                            <!-- [YOUR ANGEL STORY FULL TEXT BODY COPY CONTINUES HERE] -->
+                            <p>By the end of September, my parents were safely back home... I’m here for all of it.</p>
+                        </div>
+                        
+                        <!-- Toggle Button Action Line -->
+                        <button class="btn-toggle-story" onclick="toggleStory(this)">Read the Full Story</button>
+                    </div>
+                </article>
+
+            </div> <!-- .stories-feed-wrapper close -->
+        </main> <!-- .main-stories-column close (Fixed formatting structure) -->
+
+    </div> <!-- .site-container close (Fixed unclosed layout tag) -->
 
 
 

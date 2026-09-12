@@ -564,3 +564,11 @@ footer {
     background-color: #8c1c1c;
     color: #ffffff;
 }
+
+/* Core Column Layout Handler for the Main Web Pages */
+.main-stories-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5rem; /* Standard layout spacing gaps between components */
+}

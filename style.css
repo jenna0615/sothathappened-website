@@ -1,6 +1,10 @@
 /* ==========================================================================
    "So... That Happened" Clean & Professional Master Theme
    ========================================================================== */
+html {
+    scroll-behavior: smooth; /* Forces an elegant scrolling sweep animation dynamically across all pages */
+}
+
 :root {
     --primary-red: #D61C1C;
     --accent-gold: #FFA500;

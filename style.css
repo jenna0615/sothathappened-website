@@ -40,9 +40,14 @@ body {
     margin: 0 auto;
     padding: 2.5rem 1.5rem;
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 1fr; /* 👈 Changed from '1.3fr 1fr' to '1fr' for a single layout track */
     gap: 2.5rem;
     align-items: start;
+}
+
+/* Centered layout framework for reading text columns */
+.site-container {
+    max-width: 800px; /* 👈 Narrows the text frame specifically to center your content columns */
 }
 
 /* Header & Clean Navigation */
@@ -434,3 +439,31 @@ footer {
         padding: 1rem;
     }
 }
+
+/* ==========================================================================
+   Responsive Breakpoints for Smartphone and Tablet Screens
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Adjust container spacing dynamically on smaller viewports */
+    .site-container {
+        padding: 1.5rem 1rem; /* Reduces thick desktop gaps down to clean mobile spacing */
+        gap: 1.5rem;          /* Closes the distance gap between stacked story blocks */
+    }
+
+    /* Force all imagery frames to scale cleanly without edge spillover */
+    .story-media-container img,
+    .podcast-story img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;   /* Softens visual card presentation corners */
+    }
+
+    /* Pull in typography headers slightly for small mobile screens */
+    .story-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+}
+

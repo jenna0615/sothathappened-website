@@ -1,4 +1,6 @@
-/* "So... That Happened" Clean & Professional Theme */
+/* ==========================================================================
+   "So... That Happened" Clean & Professional Master Theme
+   ========================================================================== */
 :root {
     --primary-red: #D61C1C;
     --accent-gold: #FFA500;
@@ -19,7 +21,7 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
 
-    /* REVENUE-QUALITY BACKGROUND: Your exact gradient & cross-pattern geometry kept intact */
+    /* REVENUE-QUALITY BACKGROUND: Gradient & cross-pattern geometry */
     background-image: 
         radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 20%, transparent 20%),
         radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.15) 20%, transparent 20%),
@@ -30,31 +32,25 @@ body {
     background-size: 40px 40px, 40px 40px, 40px 40px, 40px 40px, 100% 100%;
     background-position: 0 0, 20px 20px, 0 0, 0 0, 0 0;
     background-attachment: fixed;
-    
     line-height: 1.7;
 }
 
-/* Structural Grid Wrapper */
+/* Structural Single-Column Grid Wrapper (Combined & Centered) */
 .site-container {
-    max-width: 1200px;
+    max-width: 800px; /* Centered content columns optimized for long-form reading */
     margin: 0 auto;
     padding: 2.5rem 1.5rem;
     display: grid;
-    grid-template-columns: 1fr; /* 👈 Changed from '1.3fr 1fr' to '1fr' for a single layout track */
+    grid-template-columns: 1fr;
     gap: 2.5rem;
     align-items: start;
 }
 
-/* Centered layout framework for reading text columns */
-.site-container {
-    max-width: 800px; /* 👈 Narrows the text frame specifically to center your content columns */
-}
-
-/* Header & Clean Navigation */
+/* Header & Clean Navigation Layout */
 header {
-    grid-column: span 2;
+    grid-column: span 1;
     background: var(--card-white);
-    border-bottom: 4px solid var(--accent-gold); /* Subtle flat branding rule */
+    border-bottom: 4px solid var(--accent-gold);
     border-radius: 16px;
     padding: 1.2rem 2.5rem;
     display: flex;
@@ -85,7 +81,7 @@ nav a:hover, nav a.active {
     color: var(--card-white);
 }
 
-/* Main Text Content Display Panel (Left) */
+/* Main Text Content Display Panel */
 .content-card {
     background: var(--card-white);
     border-radius: 20px;
@@ -93,18 +89,18 @@ nav a:hover, nav a.active {
     box-shadow: var(--shadow-soft);
 }
 
-/* Sidebar Column Layout (Right) */
+/* Sidebar Column Layout (Stacks below naturally in Single Column) */
 .sidebar-panel {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* Clean Oval Pill Buttons */
+/* Clean Oval Capsule Buttons */
 .pill-link-card {
     background: var(--card-white);
     border: 2px solid var(--border-light);
-    border-radius: 100px; /* Seamless geometric capsule curvature */
+    border-radius: 100px;
     padding: 1.5rem 2rem;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -123,17 +119,17 @@ nav a:hover, nav a.active {
     box-shadow: 0 8px 25px rgba(255, 165, 0, 0.12);
 }
 
-/* Branding Content Block (Bottom Right) */
+/* Branding Card Blocks */
 .branding-card {
     background: var(--card-white);
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
     box-shadow: var(--shadow-soft);
-    border-top: 5px solid var(--primary-red); /* Clean alignment accent line */
+    border-top: 5px solid var(--primary-red);
 }
 
-/* Interactive Content Blocks */
+/* Interactive Content Media Blocks */
 .media-block {
     background: #FAF9F5;
     border-left: 5px solid var(--primary-red);
@@ -146,14 +142,14 @@ audio, video {
     width: 100%;
 }
 
-/* Typography Rules */
+/* Typography Accent Rules */
 h1, h2, h3 {
     color: var(--primary-red);
     margin-top: 0;
     font-weight: 700;
 }
 
-/* Input Fields & Forms */
+/* Form Groups & Inputs */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -192,9 +188,9 @@ button:hover {
     background-color: #B51414;
 }
 
-/* Footer Element */
+/* Footer Element Area */
 footer {
-    grid-column: span 2;
+    grid-column: span 1;
     text-align: center;
     color: var(--card-white);
     font-weight: 600;
@@ -202,27 +198,15 @@ footer {
     text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-/* Responsive Structural Fallbacks */
-@media (max-width: 768px) {
-    .site-container {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-    header, footer, .site-container > * {
-        grid-column: span 1;
-    }
-}
-/* --- Brand Asset Integration Styles --- */
-
-/* Responsive Top Banner Formatting */
+/* Top Banner Formatting */
 .site-banner-container {
-    grid-column: span 2; /* Forces banner to span the full width of your two columns */
+    grid-column: span 1;
     width: 100%;
     margin-bottom: 1.5rem;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    border-bottom: 4px solid var(--accent-gold); /* Gold separation accent line */
+    border-bottom: 4px solid var(--accent-gold);
 }
 
 .site-banner-img {
@@ -232,39 +216,31 @@ footer {
     object-fit: cover;
 }
 
-/* Sidebar Logo Image Formatting */
+/* Sidebar Circle Logo Image Formatting */
 .sidebar-logo-img {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Perfect circle alignment */
-    border: 3px solid var(--accent-gold); /* Wraps logo in a professional gold frame */
+    border-radius: 50%;
+    border: 3px solid var(--accent-gold);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
 }
 
-/* Mobile responsive fixes for banner */
-@media (max-width: 768px) {
-    .site-banner-container {
-        grid-column: span 1;
-        border-radius: 8px;
-    }
-}
-/* --- Story Takeaway Block Formatting (White Background Fix) --- */
+/* Story Takeaway Block Layout */
 .story-takeaway {
     margin-top: 3rem;
     padding: 2rem;
-    background-color: #FAF9F5; /* Warm, premium off-white that pops perfectly on pure white fields */
-    border-left: 5px solid var(--primary-red); /* Your signature red branding accent */
+    background-color: #FAF9F5;
+    border-left: 5px solid var(--primary-red);
     border-right: 1px solid var(--border-light);
     border-top: 1px solid var(--border-light);
     border-bottom: 1px solid var(--border-light);
-    border-radius: 0 16px 16px 0; /* Smooth curvature balancing your content card design */
+    border-radius: 0 16px 16px 0;
     box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.02);
 }
 
-/* Moral Callout Text Formatting */
 .moral-callout p {
-    color: var(--text-muted) !important; /* Elegant dark slate gray for top-tier readability */
+    color: var(--text-muted) !important;
     font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.75;
@@ -272,34 +248,32 @@ footer {
     font-style: italic;
 }
 
-/* Subtle gold quote decoration to draw emphasis to your takeaway text */
+/* FIXED BROKEN RULE: Added missing closing bracket wrapper below */
 .moral-callout::before {
     content: "“";
     font-size: 3.5rem;
-    color: var(--accent-gold); /* Signature brand gold */
+    color: var(--accent-gold);
     line-height: 0;
     display: inline-block;
     vertical-align: -1.5rem;
     margin-right: 0.5rem;
     font-family: Georgia, serif;
+}
 
 /* ==========================================================================
-   Visitor Story Submission Form Core Layout Styles
+   Visitor Story Submission Form Styles
    ========================================================================== */
-
-/* Main Container Wrapper */
 .submission-form-container {
     max-width: 750px;
     margin: 3rem auto;
     padding: 2.5rem;
-    background: linear-gradient(145deg, #1e1212, #140d0d); /* Dark gradient blend matching your theme */
+    background: linear-gradient(145deg, #1e1212, #140d0d);
     border: 1px solid #331f1f;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
 }
 
-/* Header Text Alignments */
 .form-header {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -308,10 +282,9 @@ footer {
 }
 
 .form-header h2 {
-    color: #f7e7ce; /* Sleek cream/gold accent color */
+    color: #f7e7ce;
     font-size: 2.25rem;
     margin: 0 0 0.5rem 0;
-    font-family: inherit;
 }
 
 .form-header p {
@@ -319,13 +292,6 @@ footer {
     font-size: 1.1rem;
     line-height: 1.5;
     margin: 0;
-}
-
-/* Standard Field Group Formatting */
-.form-group {
-    margin-bottom: 1.75rem;
-    display: flex;
-    flex-direction: column;
 }
 
 .form-group label {
@@ -337,7 +303,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* Base Form Input Properties */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -348,27 +313,23 @@ footer {
     border-radius: 6px;
     color: #f5f0f0;
     font-size: 1rem;
-    font-family: inherit;
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Custom Interactive Focus States */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #8c1c1c; /* Vibrant crimson/dark red accent focus boundary */
+    border-color: #8c1c1c;
     box-shadow: 0 0 8px rgba(140, 28, 28, 0.4);
 }
 
-/* Contextual Helper Formatting */
 .field-hint {
     color: #8c7676;
     font-size: 0.8rem;
     margin-top: 0.4rem;
 }
 
-/* Checkbox Alignment Framework */
 .form-group.checkbox-group {
     flex-direction: row;
     align-items: flex-start;
@@ -379,7 +340,7 @@ footer {
 .form-group.checkbox-group input[type="checkbox"] {
     width: auto;
     margin-top: 0.25rem;
-    accent-color: #8c1c1c; /* Forces browser native checkbox into your red theme profile */
+    accent-color: #8c1c1c;
     cursor: pointer;
 }
 
@@ -390,17 +351,15 @@ footer {
     font-size: 0.9rem;
     line-height: 1.4;
     cursor: pointer;
-    user-select: none;
 }
 
-/* Submit Action Button Track */
 .form-actions {
     margin-top: 2.5rem;
     text-align: right;
 }
 
 .btn-submit {
-    background-color: #8c1c1c; /* Signature rich channel red */
+    background-color: #8c1c1c;
     color: #ffffff;
     border: none;
     padding: 1rem 2.5rem;
@@ -413,83 +372,34 @@ footer {
 }
 
 .btn-submit:hover {
-    background-color: #ab2222; /* Lighter red variation on hover mouse tracking */
+    background-color: #ab2222;
 }
 
 .btn-submit:active {
-    transform: scale(0.98); /* Tactile press down reaction */
+    transform: scale(0.98);
 }
 
 /* ==========================================================================
-   Responsive Mobile safe Breakpoint Alignments
+   Table of Contents & Expandable Text Card Frameworks
    ========================================================================== */
-@media (max-width: 600px) {
-    .submission-form-container {
-        margin: 1rem;
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
-    
-    .form-header h2 {
-        font-size: 1.75rem;
-    }
-    
-    .btn-submit {
-        width: 100%; /* Spans button full-width cleanly on small smartphone grids */
-        padding: 1rem;
-    }
-}
-
-/* ==========================================================================
-   Responsive Breakpoints for Smartphone and Tablet Screens
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    /* Adjust container spacing dynamically on smaller viewports */
-    .site-container {
-        padding: 1.5rem 1rem; /* Reduces thick desktop gaps down to clean mobile spacing */
-        gap: 1.5rem;          /* Closes the distance gap between stacked story blocks */
-    }
-
-    /* Force all imagery frames to scale cleanly without edge spillover */
-    .story-media-container img,
-    .podcast-story img {
-        width: 100% !important;
-        max-width: 100%;
-        height: auto;
-        border-radius: 6px;   /* Softens visual card presentation corners */
-    }
-
-    /* Pull in typography headers slightly for small mobile screens */
-    .story-header h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-}
-
-/* ==========================================================================
-   Table of Contents & Expandable Text Layouts
-   ========================================================================== */
-
-/* TOC Panel Wrapper */
 .story-toc-container {
-    background: linear-gradient(145deg, #181010, #0f0a0a);
-    border: 1px solid #2d1a1a;
-    border-radius: 8px;
-    padding: 1.75rem;
-    margin-bottom: 3.5rem;
+    background-color: #ffffff !important; /* Solid clean white surface container block */
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2.2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-soft);
 }
 
 .story-toc-container h2 {
-    color: #f7e7ce; /* Accent gold/cream */
-    font-size: 1.5rem;
+    color: var(--primary-red) !important;
+    font-size: 1.6rem;
     margin-top: 0;
-    margin-bottom: 1.25rem;
-    border-bottom: 1px solid #2d1a1a;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.75rem;
 }
 
-/* Side-by-Side Summary Grid */
 .toc-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -497,148 +407,146 @@ footer {
 }
 
 .toc-card {
-    background-color: #0a0505;
-    padding: 1.25rem;
-    border-left: 3px solid #8c1c1c; /* Brand accent red bar */
-    border-radius: 4px;
+    background-color: #FCFCFA !important; /* Cream accent interior surfaces */
+    border: 1px solid var(--border-light);
+
+border-left: 4px solid var(--primary-red) !important;
+border-radius: 8px;
+padding: 1.5rem;
 }
 
 .toc-card h3 {
-    color: #f5f0f0;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.15rem;
+color: var(--text-dark) !important;
+margin: 0 0 0.5rem 0;
+font-size: 1.2rem;
 }
 
 .toc-card p {
-    color: #9c8a8a;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin: 0 0 1rem 0;
+color: var(--text-muted) !important;
+font-size: 0.95rem;
+line-height: 1.5;
+margin: 0 0 1.25rem 0;
 }
 
 .toc-jump-link {
-    color: #f7e7ce;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+color: var(--primary-red) !important;
+font-weight: 700;
+text-decoration: none;
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 0.5px;
 }
 
-.toc-jump-link:hover {
-    color: #8c1c1c;
+toc-jump-link:hover {
+text-decoration: underline;
 }
 
-/* Expandable Hidden Text States */
+/* Expandable Main Story Text Panels /
+.story-content-block {
+background-color: #ffffff !important; / Locks solid pure white card box profile /
+padding: 2.5rem;
+border-radius: 0 0 16px 16px;
+margin-top: -5px; / Pulls text box clean flush against the header tile border edge */
+box-shadow: var(--shadow-soft);
+border: 1px solid var(--border-light);
+border-top: none;
+}
+
+.story-excerpt p,
+.story-full-text p {
+color: var(--text-dark) !important; /* Forces dark slate gray text on your white content panels */
+line-height: 1.65;
+font-size: 1.05rem;
+margin-bottom: 1.5rem;
+}
+
 .story-full-text.collapsed {
-    display: none; /* Keeps full story content hidden by default layout */
+display: none;
 }
 
 .story-full-text.expanded {
-    display: block;
-    margin-top: 1rem;
-    animation: fadeInReveal 0.4s ease-in-out;
+display: block;
+margin-top: 1rem;
+animation: fadeInReveal 0.4s ease-in-out;
 }
 
-/* Smooth expansion layout fade effect */
 @keyframes fadeInReveal {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(-5px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
-/* Core Toggle Button Layout */
 .btn-toggle-story {
-    background-color: transparent;
-    border: 2px solid #8c1c1c;
-    color: #f5f0f0;
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1.25rem;
-    transition: all 0.2s ease;
+background-color: transparent;
+border: 2px solid var(--primary-red);
+color: var(--primary-red);
+padding: 0.7rem 1.8rem;
+font-size: 0.95rem;
+font-weight: 700;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 1rem;
+transition: all 0.2s ease;
 }
 
 .btn-toggle-story:hover {
-    background-color: #8c1c1c;
-    color: #ffffff;
+background-color: var(--primary-red);
+color: var(--card-white);
 }
 
-/* Core Column Layout Handler for the Main Web Pages */
 .main-stories-column {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 2.5rem; /* Standard layout spacing gaps between components */
+display: flex;
+flex-direction: column;
+width: 100%;
+gap: 2.5rem;
 }
+
 /* ==========================================================================
-   Fix Background Colors & Typography Contrast for Stories Page
-   ========================================================================== */
+Global Mobile-Responsive Scale Overrides
+========================================================================== */
 
-/* 1. Add a solid background style to the top Table of Contents Container */
-.story-toc-container {
-    background-color: #ffffff; /* Forces a solid white block */
-    color: #333333;            /* Dark charcoal text for comfortable reading */
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle depth shadow */
+@media (max-width: 768px) {
+.site-container {
+padding: 1.5rem 1rem;
+gap: 1.5rem;
+max-width: 100%;
+}
+header, footer, .site-banner-container, .site-container > * {
+grid-column: span 1;
+}
+header {
+flex-direction: column;
+gap: 1rem;
+padding: 1.5rem;
+text-align: center;
+}
+nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 0.5rem;
+}
+nav a {
+margin-left: 0;
+font-size: 0.9rem;
+padding: 0.5rem 0.8rem;
+}
+.story-content-block, .story-toc-container {
+padding: 1.5rem;
+}
+.story-header h1, .story-header h2 {
+font-size: 1.6rem !important;
+}
+.submission-form-container {
+margin: 1rem;
+padding: 1.5rem;
+}
 }
 
-/* Ensure the header inside the TOC contrasts beautifully */
-.story-toc-container h2 {
-    color: #8c1c1c;            /* Your signature rich podcast red */
-    border-bottom: 1px solid #eeeeee;
-    margin-top: 0;
-    padding-bottom: 0.75rem;
-}
 
-/* 2. Style the individual jump-cards inside the TOC grid */
-.toc-card {
-    background-color: #fcf9f5; /* Off-white/cream background to separate cards */
-    border: 1px solid #ebdcd0;
-    border-left: 4px solid #8c1c1c; /* Thick red accent timeline bar */
-    border-radius: 6px;
-    padding: 1.25rem;
-}
 
-.toc-card h3 {
-    color: #222222;
-    margin-top: 0;
-}
 
-.toc-card p {
-    color: #555555;
-}
 
-/* Fix the hard-to-read blue link text to match your red branding */
-.toc-jump-link {
-    color: #8c1c1c !important;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
 
-.toc-jump-link:hover {
-    text-decoration: underline;
-}
 
-/* 3. Wrap the main story excerpt and full text areas in matching white containers */
-.story-content-block {
-    background-color: #ffffff; /* Forces a clean solid white card background layout */
-    color: #333333;            /* Dark, highly readable typography layout */
-    padding: 2rem;
-    border-radius: 0 0 8px 8px; /* Rounds bottom corners to seamlessly match your title cards */
-    margin-top: -1px;          /* Glues the body block flush to the bottom of the title element */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
-/* Ensure all text inside the story blocks matches the clean dark layout readability profile */
-.story-excerpt p,
-.story-full-text p {
-    color: #333333 !important;
-    line-height: 1.6;
-    font-size: 1.05rem;
-    margin-bottom: 1.25rem;
-}
+
